@@ -1,12 +1,12 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.6.20"
+    kotlin("jvm") version "1.6.10"
     application
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+group = "me.usuario"
+version = "1.0"
 
 repositories {
     mavenCentral()
@@ -14,13 +14,15 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("com.h2database:h2:2.1.210")
+    implementation("org.jetbrains.kotlinx:kotlinx-cli:0.3.4")
 }
 
 tasks.test {
-    useJUnitPlatform()
+    useJUnit()
 }
 
-tasks.withType<KotlinCompile> {
+tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "1.8"
 }
 
