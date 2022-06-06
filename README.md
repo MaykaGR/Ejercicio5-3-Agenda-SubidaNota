@@ -24,9 +24,13 @@ GestionarAgenda
 - El programa pedirá introducir algo por teclado:
 
 LectorInfo
+
     - pideNumeroTelefono
+    
     - pideContacto
+
 EscritorInfo
+
     - escribeInfoContacto
 
 o Si se introduce un número de teléfono comprobará si existe, si es así mostrará a quién pertenece.
