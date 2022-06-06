@@ -5,8 +5,13 @@ A tener en cuenta:
     Uso de Listas, Mapas, Conjuntos
     Usos de clases, Interfaces, Inversión de dependencias.
     Uso de archivos
+        -> Lectura Consola, parser Cli
+        -> Mostrar Consola, format por tabla
     Uso de base de datos.
-    Uso de Compose
+    Uso de Compose.
+    Uso de Logs.
+    Uso de Kdoc.
+ 
 
 
  
