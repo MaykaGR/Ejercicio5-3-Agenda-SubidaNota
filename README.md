@@ -10,7 +10,7 @@ A tener en cuenta:
 
 
  
-
+*** Programa documentado con doca
 
 /*Crear un programa para gestionar una agenda de contactos. El funcionamiento será el siguiente:
 
