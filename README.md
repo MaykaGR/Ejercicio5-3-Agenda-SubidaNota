@@ -69,8 +69,11 @@ Parseador
     parser
 
 - Comandos especiales:
+
 o adios: Sale del programa
+
 o listado: Muestra el listado completo de contactos ordenados por nombre
+
 o filtra texto_a_buscar: Muestra el listado de los contactos que contengan texto_a_buscar o “Ningún
 contacto” si no hubiera ninguno.
 
