@@ -28,8 +28,11 @@ o Si se introduce un número de teléfono comprobará si existe, si es así most
 Si no existe pedirá el nombre del contacto para darlo de alta.
 
 GestionarAgenda.darDeAlta()
+
     Agenda.existeNumero
+    
     Agenda.infoContacto
+    
     Agenda.alta
 
 
