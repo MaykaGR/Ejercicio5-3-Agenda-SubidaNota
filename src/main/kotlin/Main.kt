@@ -3,6 +3,7 @@ import java.sql.Connection
 import java.sql.ConnectionBuilder
 import java.sql.DriverManager
 import java.sql.SQLException
+import mu.KotlinLogging
 
 
 fun main(args: Array<String>) {

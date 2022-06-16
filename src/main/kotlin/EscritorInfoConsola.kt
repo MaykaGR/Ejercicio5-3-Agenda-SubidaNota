@@ -1,9 +1,14 @@
 import de.m3y.kformat.Table
 import de.m3y.kformat.table
-
+/**
+ * Esta clase escribe la información por consola.
+ */
 class EscritorInfoConsola: EscritorInfo {
 
-
+    /**
+     * Recibe la agenda y muestra la información en una tabla.
+     * @return nada.
+     */
         override fun mostrarAgenda(agenda: Agenda) {
 
             val agendaTabla = table {

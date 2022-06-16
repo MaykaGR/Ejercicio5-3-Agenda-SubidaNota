@@ -17,6 +17,8 @@ dependencies {
     implementation("com.h2database:h2:2.1.210")
     implementation("org.jetbrains.kotlinx:kotlinx-cli:0.3.4")
     implementation("de.m3y.kformat:kformat:0.9")
+    implementation( "io.github.microutils:kotlin-logging-jvm:2.1.20")
+    implementation( "org.slf4j:slf4j-simple:1.7.32")
 }
 
 tasks.test {
