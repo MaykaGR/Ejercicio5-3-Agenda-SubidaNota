@@ -1,6 +1,6 @@
 import kotlin.system.exitProcess
 
-class GestorArgumentos(val args: Array<String>) {
+class GestorArgumentos(val args: Array<String>, val agenda: Agenda) {
 
 
     //val adios: String? -a, val filtra: String? -f, val listado: String? -l
@@ -12,16 +12,13 @@ class GestorArgumentos(val args: Array<String>) {
             }
             else if(args[i]== "f"){
                 var buscar = args[i+1]
-                if(buscar.matches(Regex("^\\+?\\d+(?:,\\d+)?$"))){
-
-                }
-                else if(buscar.matches(Regex("^\\pL+?[\\ -~\\d\\pL\\s]*$"))){
-
+                    for(buscar in agenda.contactos){
+                        println(buscar)
+                    }
                 }
 
-            }
             else if(args[i]=="l"){
-
+                println(agenda.contactos.sortedBy { it.nombre })
             }
         }
     }

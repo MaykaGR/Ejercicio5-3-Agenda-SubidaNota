@@ -1,4 +1,1 @@
-data class Contactos(var nombre: String, var tlf: String) {
-
-
-}
+data class Contactos(var nombre: String, var tlf: String)

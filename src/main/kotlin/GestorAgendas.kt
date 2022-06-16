@@ -1,2 +1,2 @@
-class GestorAgendas {
+interface GestorAgendas {
 }

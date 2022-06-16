@@ -1,29 +1,20 @@
 import de.m3y.kformat.Table
 import de.m3y.kformat.table
 
-class EscritorInfoConsola {
-
-        var cabecera = listOf("Contacto","Numero")
+class EscritorInfoConsola: EscritorInfo {
 
 
-        fun generacionHorario(agenda: Agenda) {
+        override fun mostrarAgenda(agenda: Agenda) {
 
             val agendaTabla = table {
-                header(cabecera)
+                header("Contacto", "Numero")
 
-                for (i in agenda.contactos) {
-                    row(*agenda.contactos[i].toTypedArray())
+                for (i in 0..agenda.contactos.size-1) {
+                    row(agenda.contactos[i].nombre, agenda.contactos[i].tlf)
                 }
 
                 hints {
-                    for (i in cabecera.indices) {
-                        alignment(cabecera[i], Table.Hints.Alignment.RIGHT)
-                    }
-
-                    precision(cabecera[2], 2)
-                    precision(cabecera.last(),2)
-                    postfix(cabecera.last(),2)
-                    borderStyle = Table.BorderStyle.SINGLE_LINE // or NONE
+                    borderStyle = Table.BorderStyle.SINGLE_LINE
 
                 }
             }.render(StringBuilder())
