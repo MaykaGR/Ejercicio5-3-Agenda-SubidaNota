@@ -16,6 +16,7 @@ dependencies {
     testImplementation(kotlin("test"))
     implementation("com.h2database:h2:2.1.210")
     implementation("org.jetbrains.kotlinx:kotlinx-cli:0.3.4")
+    implementation("de.m3y.kformat:kformat:0.9")
 }
 
 tasks.test {
