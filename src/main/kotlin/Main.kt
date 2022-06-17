@@ -17,8 +17,13 @@ fun main(args: Array<String>) {
     val gestionDeArgumentos = GestorArgumentos(args,agenda)
     val escritor =  EscritorInfoConsola()
     escritor.mostrarAgenda(agenda)
-
-
+    val connection = ConnectionBuilder()
+    val agendabd = AgendaDAO(c = connection.connection)
+    val gestorabd = GestorBaseDeDatos(agendabd)
+    gestorabd.crearTabla()
+    val listaContactos = listOf(contacto,contacto2,contacto3)
+    gestorabd.add(listaContactos)
+    println(gestorabd.mostrarTodo())
 
 
 }

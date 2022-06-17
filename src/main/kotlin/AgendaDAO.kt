@@ -82,7 +82,7 @@ class AgendaDAO(nombre_tabla: String = "agenda", c: Connection, nomID: String = 
 
                     // Step 4: Process the ResultSet object.
                     while (rs.next()) {
-                        val id = rs.getInt("ID_AGENDA")
+                        //val id = rs.getInt("ID_AGENDA")
                         val nombre = rs.getString("NOMBRE")
                         val numero = rs.getString("NUMERO")
                         contacto = Contactos(nombre = nombre, tlf = numero)

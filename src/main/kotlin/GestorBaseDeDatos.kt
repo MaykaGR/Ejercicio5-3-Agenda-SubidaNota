@@ -29,31 +29,33 @@ class GestorBaseDeDatos(val dao: AgendaDAO) {
     }
     /**
      * Muestra el contenido completo.
-     * @return nada.
+     * @return la lista de contactos.
      */
-    fun mostrarTodo(){
-        dao.selectAll()
+    fun mostrarTodo(): List<Contactos> {
+       val lista = dao.selectAll()
+        return lista
     }
 
     /**
      * Muestra un contacto concreto.
-     * @return nada.
+     * @return el contacto.
      */
-    fun mostrarContacto(id: Int){
-        dao.selectById(id)
+    fun mostrarContacto(id: Int): Contactos{
+        val contacto = dao.selectById(id)
+        return contacto
     }
     /**
      * Modifica un contacto.
-     * @return nada.
+     * @return true o false en base a sí se ha modificado o no.
      */
-    fun modificar(id: Int){
+    fun modificar(id: Int): Boolean{
         println("Introduce el nombre: ")
         val nombre = readLine()?: " "
         println("Introduce el tlf: ")
         val tlf = readLine()?: " "
         val contacto = Contactos(nombre,tlf)
-        dao.update(contacto,id)
-
+        val modificado = dao.update(contacto,id)
+        return modificado
     }
 
 }
